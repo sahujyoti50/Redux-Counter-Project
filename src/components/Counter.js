@@ -1,21 +1,22 @@
 import { useSelector, useDispatch } from 'react-redux';
 import classes from './Counter.module.css';
+import {counterActions} from '../store/index';
 const Counter = () => {
   const counter = useSelector(state => state.counter);
   const show = useSelector(state => state.showCounter);
 
   const dispatch = useDispatch();
   const toggleCounterHandler = () => {
-    dispatch({ type: 'toggle' })
+    dispatch(counterActions.toggle());
   };
   const incrementClickHandler = () => {
-    dispatch({ type: 'increment' })
+    dispatch(counterActions.increment()) 
   }
   const decrementClickHandler = () => {
-    dispatch({ type: 'decrement' })
+    dispatch(counterActions.decrement());
   }
   const incrementBy5ClickHandler = () => {
-    dispatch({ type: 'incrementBy5', amount: 5 })
+    dispatch(counterActions.increse(5));//5 is payload value
     //adding extra property to action is known as action payload.
   }
   return (
