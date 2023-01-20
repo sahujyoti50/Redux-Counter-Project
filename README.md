@@ -8,4 +8,4 @@ features:
 4. Toggle
 
 Outcome:
-![image](https://user-images.githubusercontent.com/15225177/213403238-53f928fa-504d-40c0-a956-42773c522790.png)
+![image](https://user-images.githubusercontent.com/15225177/213663554-3312e072-7120-4dc9-8cf9-ab314cc245d3.png)
