@@ -19,6 +19,15 @@ const counterSlice = createSlice({
         },
         toggle(state) {
             state.showCounter = !state.showCounter;
+        },
+        multiply(state,action) {
+            state.counter = state.counter * action.payload;
+        },
+        divide(state,action) {
+            state.counter = state.counter / action.payload;
+        },
+        percent(state,action){
+            state.counter = (state.counter * action.payload)/100;
         }
     }
 })

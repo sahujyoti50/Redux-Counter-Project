@@ -19,6 +19,15 @@ const Counter = () => {
     dispatch(counterActions.increse(5));//5 is payload value
     //adding extra property to action is known as action payload.
   }
+  const multiplyClickHandler=()=>{
+    dispatch(counterActions.multiply(10));
+  }
+  const divideClickHandler=()=>{
+    dispatch(counterActions.divide(2));
+  }
+  const percentClickHandler=()=>{
+    dispatch(counterActions.percent(50));
+  }
   return (
     <main className={classes.counter}>
       <h1>Redux Counter</h1>
@@ -28,6 +37,10 @@ const Counter = () => {
         <button onClick={decrementClickHandler}>-</button>
         {/* action */}
         <button onClick={incrementBy5ClickHandler}>+5</button>
+
+        <button onClick={multiplyClickHandler}>*10</button>
+        <button onClick={divideClickHandler}>/2</button>
+        <button onClick={percentClickHandler}>50%</button>
       </div>
       <button className="toggle" onClick={toggleCounterHandler}>Toggle Counter</button>
     </main>
